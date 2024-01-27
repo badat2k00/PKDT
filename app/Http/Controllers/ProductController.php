@@ -20,7 +20,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('auth.register');
     }
 
     /**
@@ -36,7 +36,7 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        
     }
 
     /**

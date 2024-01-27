@@ -8,7 +8,12 @@
 					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-dollar"></i> Ví</a></li>
-						<li><a href="#"><i class="fa fa-user-o"></i> Tài khoản</a></li>
+						<li>
+							<!-- nếu chưa đăng nhập -->
+							<a href="{{route('login')}}"><i class="fa fa-user-o"></i> Tài khoản</a>
+							<!-- nếu đã đăng nhập
+							<a href="#"><i class="fa fa-user-o"></i> Tài khoản</a> -->
+						</li>
 					</ul>
 				</div>
 			</div>

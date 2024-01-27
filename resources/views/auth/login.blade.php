@@ -41,7 +41,7 @@
             <div class="row" style="display: flex; justify-content: center">
                 <div class="col">Chưa có tài khoản?</div>
                 <div class="col" style="width:2%"></div>
-                <div class="col"><a href="#" class="text-decoration-none">Đăng ký</a></div>
+                <div class="col"><a href="{{route('register')}}" class="text-decoration-none">Đăng ký</a></div>
             </div>
             <div class="row" style="margin-top:2%;">
                 <div class="col-md-6 text-center">
