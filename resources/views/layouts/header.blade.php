@@ -10,7 +10,7 @@
 						<li><a href="#"><i class="fa fa-dollar"></i> Ví</a></li>
 						<li>
 							<!-- nếu chưa đăng nhập -->
-							<a href="{{route('login')}}"><i class="fa fa-user-o"></i> Tài khoản</a>
+							<a href="{{route('login')}}"><i class="fa fa-user-o"></i> Đăng nhập</a>
 							<!-- nếu đã đăng nhập
 							<a href="#"><i class="fa fa-user-o"></i> Tài khoản</a> -->
 						</li>
