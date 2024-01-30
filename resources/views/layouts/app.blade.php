@@ -20,6 +20,10 @@
 		<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
 
 		<link type="text/css" rel="stylesheet" href="{{asset('css/style.css')}}"/>
+
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        
+
     </head>
     <body >
         <header>
