@@ -7,7 +7,10 @@
 						<li><a href="#"><i class="fa fa-map-marker"></i> 175 Tây Sơn, Đống Đa, Hà Nội</a></li>
 					</ul>
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-dollar"></i> Ví</a></li>
+						<li>
+							<!-- nếu đã đăng nhập
+							<a href="#"><i class="fa fa-dollar"></i> Ví</a> -->
+						</li>
 						<li>
 							<!-- nếu chưa đăng nhập -->
 							<a href="{{route('login')}}"><i class="fa fa-user-o"></i> Đăng nhập</a>
@@ -39,11 +42,6 @@
 						<div class="col-md-6">
 							<div class="header-search">
 								<form>
-									<select class="input-select">
-										<option value="0">Danh mục</option>
-										<option value="1">Category 01</option>
-										<option value="1">Category 02</option>
-									</select>
 									<input class="input" placeholder="Bạn muốn tìm gì...">
 									<button class="search-btn">Tìm kiếm</button>
 								</form>
@@ -124,3 +122,26 @@
 				<!-- container -->
 			</div>
 			<!-- /MAIN HEADER -->
+
+			<!-- NAVIGATION -->
+			<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul class="main-nav nav navbar-nav">
+						<li class="active"><a href="#">TRANG CHỦ</a></li>
+						<li><a href="#">KHUYẾN MÃI</a></li>
+						<li><a href="#">ỐP LƯNG</a></li>
+                        <li><a href="#">KÍNH CƯỜNG LỰC</a></li>
+						<li><a href="#">DÂY SẠC - CỦ SẠC</a></li>
+						<li><a href="#">SẠC DỰ PHÒNG</a></li>
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+		<!-- /NAVIGATION -->

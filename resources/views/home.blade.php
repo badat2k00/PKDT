@@ -2,29 +2,7 @@
 @section('title', 'Trang chủ')
 @section('main')
 		<!-- NAVIGATION -->
-		<nav id="navigation">
-			<!-- container -->
-			<div class="container">
-				<!-- responsive-nav -->
-				<div id="responsive-nav">
-					<!-- NAV -->
-					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="#">TRANG CHỦ</a></li>
-						<li><a href="#">KHUYẾN MÃI</a></li>
-						<li><a href="#">DANH MỤC</a></li>
-						<li><a href="#">ỐP LƯNG</a></li>
-                        <li><a href="#">KÍNH CƯỜNG LỰC</a></li>
-						<li><a href="#">DÂY SẠC - CÁP SẠC</a></li>
-						<li><a href="#">SẠC DỰ PHÒNG</a></li>
-					</ul>
-					<!-- /NAV -->
-				</div>
-				<!-- /responsive-nav -->
-			</div>
-			<!-- /container -->
-		</nav>
-		<!-- /NAVIGATION -->
-
+		
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
@@ -94,7 +72,7 @@
 								<ul class="section-tab-nav tab-nav">
 									<li class="active"><a data-toggle="tab" href="#tab1">Ốp lưng</a></li>
 									<li><a data-toggle="tab" href="#tab1">Cường lực</a></li>
-									<li><a data-toggle="tab" href="#tab1">Dây sạc, cáp sạc</a></li>
+									<li><a data-toggle="tab" href="#tab1">Dây sạc, củ sạc</a></li>
 									<li><a data-toggle="tab" href="#tab1">Sạc dự phòng</a></li>
 								</ul>
 							</div>
@@ -325,7 +303,7 @@
 								<ul class="section-tab-nav tab-nav">
 									<li class="active"><a data-toggle="tab" href="#tab2">Ốp lưng</a></li>
 									<li><a data-toggle="tab" href="#tab2">Cường lực</a></li>
-									<li><a data-toggle="tab" href="#tab2">Dây sạc, cáp sạc</a></li>
+									<li><a data-toggle="tab" href="#tab2">Dây sạc, củ sạc</a></li>
 									<li><a data-toggle="tab" href="#tab2">Sạc dự phòng</a></li>
 								</ul>
 							</div>
@@ -502,7 +480,7 @@
 				<div class="row">
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">Ốp lưng bán chạy</h4>
+							<h4 class="title">Đề xuất</h4>
 							<div class="section-nav">
 								<div id="slick-nav-3" class="products-slick-nav"></div>
 							</div>
@@ -595,7 +573,7 @@
 
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">Cường lực bán chạy</h4>
+							<h4 class="title">Đề xuất</h4>
 							<div class="section-nav">
 								<div id="slick-nav-4" class="products-slick-nav"></div>
 							</div>
@@ -690,7 +668,7 @@
 
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">Sạc dự phòng bán chạy</h4>
+							<h4 class="title">Đề xuất</h4>
 							<div class="section-nav">
 								<div id="slick-nav-5" class="products-slick-nav"></div>
 							</div>
