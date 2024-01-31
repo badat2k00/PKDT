@@ -42,7 +42,17 @@
 						</li>
 						<li>
 							<!-- nếu chưa đăng nhập -->
-							<a href="{{route('login')}}"><i class="fa fa-user-o"></i> Đăng nhập</a>
+							@if (Route::has('login'))
+								<div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+									@auth
+										<a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Trang chủ</a>
+									@else
+										<a href="{{route('login')}}"><i class="fa fa-user-o"></i> Đăng nhập</a>
+									@endauth
+								</div>
+							@endif
+							
+							
 							<!-- nếu đã đăng nhập
 							<a href="#"><i class="fa fa-user-o"></i> Tài khoản</a> -->
 						</li>
@@ -60,7 +70,7 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="{{route('home')}}" class="logo">
 									<img src="./img/logo.png" alt="" style="width:100%">
 								</a>
 							</div>
@@ -92,23 +102,14 @@
 								<!-- /Wishlist -->
 
 								<!-- Cart -->
-								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+								<div>
+									<a href="#">
 										<i class="fa fa-shopping-cart"></i>
 										<span>Giỏ hàng</span>
-										<!-- <div class="qty">3</div> -->
+										<!-- <div class="qty">2</div> -->
 									</a>
 								</div>
 								<!-- /Cart -->
-
-								<!-- Menu Toogle -->
-								<div class="menu-toggle">
-									<a href="#">
-										<i class="fa fa-bars"></i>
-										<span>Menu</span>
-									</a>
-								</div>
-								<!-- /Menu Toogle -->
 							</div>
 						</div>
 						<!-- /ACCOUNT -->

@@ -42,7 +42,17 @@
 						</li>
 						<li>
 							<!-- nếu chưa đăng nhập -->
-							<a href="{{route('login')}}"><i class="fa fa-user-o"></i> Đăng nhập</a>
+							@if (Route::has('login'))
+								<div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+									@auth
+										<a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Trang chủ</a>
+									@else
+										<a href="{{route('login')}}"><i class="fa fa-user-o"></i> Đăng nhập</a>
+									@endauth
+								</div>
+							@endif
+							
+							
 							<!-- nếu đã đăng nhập
 							<a href="#"><i class="fa fa-user-o"></i> Tài khoản</a> -->
 						</li>
@@ -60,7 +70,7 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="{{route('home')}}" class="logo">
 									<img src="./img/logo.png" alt="" style="width:100%">
 								</a>
 							</div>
@@ -92,23 +102,14 @@
 								<!-- /Wishlist -->
 
 								<!-- Cart -->
-								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+								<div>
+									<a href="#">
 										<i class="fa fa-shopping-cart"></i>
 										<span>Giỏ hàng</span>
-										<!-- <div class="qty">3</div> -->
+										<!-- <div class="qty">2</div> -->
 									</a>
 								</div>
 								<!-- /Cart -->
-
-								<!-- Menu Toogle -->
-								<div class="menu-toggle">
-									<a href="#">
-										<i class="fa fa-bars"></i>
-										<span>Menu</span>
-									</a>
-								</div>
-								<!-- /Menu Toogle -->
 							</div>
 						</div>
 						<!-- /ACCOUNT -->
@@ -131,19 +132,34 @@
                         @csrf
                         <div class="text-left" style="margin: 2%; margin-left:25%; margin-right:25%;">
                             <label for="exampleInputName" class="form-label">Họ tên</label>
-                            <input type="name" class="form-control" id="exampleInputName">
+                            <input id="exampleInputName" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus>
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert" style="color: red;">
+                                        {{ $message }}
+                                    </span>
+                                @enderror
                         </div>
                         <div class="text-left" style="margin: 2%; margin-left:25%; margin-right:25%;">
                             <label for="exampleInputEmail1" class="form-label">Email hoặc SĐT</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <input id="exampleInputEmail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert" style="color: red;">
+                                        {{ $message }}
+                                    </span>
+                                @enderror
                         </div>
                         <div class="text-left" style="margin: 2%; margin-left:25%; margin-right:25%;">
                             <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input id="exampleInputPassword1" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert" style="color: red;">
+                                    	{{ $message }}
+                                    </span>
+                                @enderror
                         </div>
                         <div class="text-left" style="margin: 2%; margin-left:25%; margin-right:25%;">
                             <label for="exampleInputCfPassword1" class="form-label">Xác nhận mật khẩu</label>
-                            <input type="cfpassword" class="form-control" id="exampleInputCfPassword1">
+							<input id="exampleInputCfPassword1" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
                         </div>
                         <button type="submit" class="btn primary-btn submit">Đăng ký</button>
                         </form>

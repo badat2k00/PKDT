@@ -7,16 +7,42 @@
 						<li><a href="#"><i class="fa fa-map-marker"></i> 175 Tây Sơn, Đống Đa, Hà Nội</a></li>
 					</ul>
 					<ul class="header-links pull-right">
-						<li>
-							<!-- nếu đã đăng nhập
-							<a href="#"><i class="fa fa-dollar"></i> Ví</a> -->
-						</li>
-						<li>
-							<!-- nếu chưa đăng nhập -->
-							<a href="{{route('login')}}"><i class="fa fa-user-o"></i> Đăng nhập</a>
-							<!-- nếu đã đăng nhập
-							<a href="#"><i class="fa fa-user-o"></i> Tài khoản</a> -->
-						</li>
+						@guest
+                            @if (Route::has('login'))
+                                <li>
+                                    <a href="{{ route('login') }}"><i class="fa fa-user-o"></i>Đăng nhập</a>
+                                </li>
+                            @endif
+                        	@else
+							<li>
+								<a  href="#"><i class="fa fa-dollar"></i>Ví</a>
+							</li>
+                            <li>
+							<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="cursor: pointer;">
+										<i class="fa fa-user-o"></i>{{ Auth::user()->name}}
+									</a>
+									<div class="btn profile-dropdown">
+										<ul class="profile-list">
+											<li>fdibvhdf</li><hr>
+											<li>skdhvjsd</li>
+											<hr style="margin-bottom: 0%;">
+											<li>
+												<a class="dropdown-item" href="{{ route('logout') }}"
+													onclick="event.preventDefault();
+																document.getElementById('logout-form').submit();">
+													Đăng xuất
+												</a>
+
+												<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+													@csrf
+												</form>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+                        @endguest
 					</ul>
 				</div>
 			</div>
@@ -31,7 +57,7 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="{{route('home')}}" class="logo">
 									<img src="./img/logo.png" alt="" style="width:100%">
 								</a>
 							</div>
@@ -63,45 +89,12 @@
 								<!-- /Wishlist -->
 
 								<!-- Cart -->
-								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+								<div>
+									<a href="#">
 										<i class="fa fa-shopping-cart"></i>
 										<span>Giỏ hàng</span>
-										<!-- <div class="qty">3</div> -->
+										<!-- <div class="qty">2</div> -->
 									</a>
-									<div class="btn cart-dropdown">
-										<div class="cart-list">
-											<div class="product-widget">
-												<div class="product-img">
-													<img src="./img/product01.png" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">product name goes here</a></h3>
-													<h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
-												</div>
-												<button class="delete"><i class="fa fa-close"></i></button>
-											</div>
-
-											<div class="product-widget">
-												<div class="product-img">
-													<img src="./img/product02.png" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">product name goes here</a></h3>
-													<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
-												</div>
-												<button class="delete"><i class="fa fa-close"></i></button>
-											</div>
-										</div>
-										<div class="cart-summary">
-											<small>Đã chọn 3 sản phẩm</small>
-											<h5>Thành tiền: $2940.00</h5>
-										</div>
-										<div class="cart-btns">
-											<a href="#">Xem giỏ hàng</a>
-											<a href="#">Thanh toán  <i class="fa fa-arrow-circle-right"></i></a>
-										</div>
-									</div>
 								</div>
 								<!-- /Cart -->
 
