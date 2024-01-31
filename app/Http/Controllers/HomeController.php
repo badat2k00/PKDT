@@ -11,7 +11,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    // HAM DANG NHAP
     // public function __construct()
     // {
     //     $this->middleware('auth');
