@@ -1,3 +1,20 @@
+function openForm() {
+	document.getElementById("editProfileForm").style.display = "block";
+	document.getElementsByClassName("info-profile")[0].style.display = "none";
+	document.getElementsByClassName("open-button")[0].style.display = "none";
+  }
+  
+  function closeForm() {
+	document.getElementById("editProfileForm").style.display = "none";
+	document.getElementsByClassName("info-profile")[0].style.display = "block";
+	document.getElementsByClassName("open-button")[0].style.display = "block";
+  }
+
+//   if(queryString === "bought"){
+// 	document.getElementsByClassName("info-profile")[0].style.display = "none";
+// }
+
+
 (function($) {
 	"use strict"
 

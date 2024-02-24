@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Product ;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -33,5 +34,10 @@ class HomeController extends Controller
     {
         //return view('auth.login');
         return view('store');
+    }
+
+    public function profile(User $user)
+    {
+        return view('auth.profile');
     }
 }

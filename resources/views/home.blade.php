@@ -2,7 +2,28 @@
 @section('title', 'Trang chủ')
 @section('main')
 		<!-- NAVIGATION -->
-		
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul class="main-nav nav navbar-nav">
+						<li class="active"><a href="#">TRANG CHỦ</a></li>
+						<li><a href="#">KHUYẾN MÃI</a></li>
+						<li><a href="#">ỐP LƯNG</a></li>
+                        <li><a href="#">KÍNH CƯỜNG LỰC</a></li>
+						<li><a href="#">DÂY SẠC - CỦ SẠC</a></li>
+						<li><a href="#">SẠC DỰ PHÒNG</a></li>
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+		<!-- /NAVIGATION -->
+
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
@@ -13,7 +34,7 @@
 					<div class="col-md-4 col-xs-6">
 						<div class="shop">
 							<div class="shop-img">
-								<img src="./img/shop01.png" alt="">
+								<img src="{{ asset('img/shop01.png')}}" alt="">
 							</div>
 							<div class="shop-body">
 								<h3>Ốp lưng<br>sành điệu</h3>
@@ -27,7 +48,7 @@
 					<div class="col-md-4 col-xs-6">
 						<div class="shop">
 							<div class="shop-img">
-								<img src="./img/shop03.png" alt="">
+								<img src="{{ asset('img/shop03.png')}}" alt="">
 							</div>
 							<div class="shop-body">
 								<h3>Sạc dự phòng<br>giá tốt</h3>
@@ -41,7 +62,7 @@
 					<div class="col-md-4 col-xs-6">
 						<div class="shop">
 							<div class="shop-img">
-								<img src="./img/shop02.png" alt="">
+								<img src="{{ asset('img/shop02.png')}}" alt="">
 							</div>
 							<div class="shop-body">
 								<h3>Cường lực<br>siêu bền</h3>
@@ -90,7 +111,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product01.png" alt="">
+												<img src="{{ asset('img/product01.png')}}" alt="">
 												<div class="product-label">
 													<span class="sale">-30%</span>
 													<span class="new">NEW</span>
@@ -121,7 +142,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product02.png" alt="">
+												<img src="{{ asset('img/product02.png')}}" alt="">
 												<div class="product-label">
 													<span class="new">NEW</span>
 												</div>
@@ -151,7 +172,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product03.png" alt="">
+												<img src="{{ asset('img/product03.png')}}" alt="">
 												<div class="product-label">
 													<span class="sale">-30%</span>
 												</div>
@@ -176,7 +197,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product04.png" alt="">
+												<img src="{{ asset('img/product04.png')}}" alt="">
 											</div>
 											<div class="product-body">
 												<p class="product-category">#tendanhmuc</p>
@@ -203,7 +224,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product05.png" alt="">
+												<img src="{{ asset('img/product05.png')}}" alt="">
 											</div>
 											<div class="product-body">
 												<p class="product-category">#tendanhmuc</p>
@@ -321,7 +342,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product06.png" alt="">
+												<img src="{{ asset('img/product06.png')}}" alt="">
 												<div class="product-label">
 													<span class="sale">-30%</span>
 													<span class="new">NEW</span>
@@ -352,7 +373,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product07.png" alt="">
+												<img src="{{ asset('img/product07.png')}}" alt="">
 												<div class="product-label">
 													<span class="new">NEW</span>
 												</div>
@@ -382,7 +403,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product08.png" alt="">
+												<img src="{{ asset('img/product08.png')}}" alt="">
 												<div class="product-label">
 													<span class="sale">-30%</span>
 												</div>
@@ -407,7 +428,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product09.png" alt="">
+												<img src="{{ asset('img/product09.png')}}" alt="">
 											</div>
 											<div class="product-body">
 												<p class="product-category">#tendanhmuc</p>
@@ -434,7 +455,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="./img/product01.png" alt="">
+												<img src="{{ asset('img/product01.png')}}" alt="">
 											</div>
 											<div class="product-body">
 												<p class="product-category">#tendanhmuc</p>
@@ -491,7 +512,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product07.png" alt="">
+										<img src="{{ asset('img/product07.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -504,7 +525,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product08.png" alt="">
+										<img src="{{ asset('img/product08.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -517,7 +538,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product09.png" alt="">
+										<img src="{{ asset('img/product09.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -532,7 +553,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product01.png" alt="">
+										<img src="{{ asset('img/product01.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -545,7 +566,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product02.png" alt="">
+										<img src="{{ asset('img/product02.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -558,7 +579,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product03.png" alt="">
+										<img src="{{ asset('img/product03.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -584,7 +605,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product04.png" alt="">
+										<img src="{{ asset('img/product04.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -597,7 +618,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product05.png" alt="">
+										<img src="{{ asset('img/product05.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -610,7 +631,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product06.png" alt="">
+										<img src="{{ asset('img/product06.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -625,7 +646,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product07.png" alt="">
+										<img src="{{ asset('img/product07.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -638,7 +659,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product08.png" alt="">
+										<img src="{{ asset('img/product08.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -651,7 +672,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product09.png" alt="">
+										<img src="{{ asset('img/product09.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -679,7 +700,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product01.png" alt="">
+										<img src="{{ asset('img/product01.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -692,7 +713,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product02.png" alt="">
+										<img src="{{ asset('img/product02.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -705,7 +726,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product03.png" alt="">
+										<img src="{{ asset('img/product03.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -720,7 +741,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product04.png" alt="">
+										<img src="{{ asset('img/product04.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -733,7 +754,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product05.png" alt="">
+										<img src="{{ asset('img/product05.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>
@@ -746,7 +767,7 @@
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="./img/product06.png" alt="">
+										<img src="{{ asset('img/product06.png')}}" alt="">
 									</div>
 									<div class="product-body">
 										<p class="product-category">#tendanhmuc</p>

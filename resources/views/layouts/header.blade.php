@@ -18,14 +18,16 @@
 								<a  href="#"><i class="fa fa-dollar"></i>Ví</a>
 							</li>
                             <li>
-							<div class="dropdown">
+								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="cursor: pointer;">
 										<i class="fa fa-user-o"></i>{{ Auth::user()->name}}
 									</a>
 									<div class="btn profile-dropdown">
 										<ul class="profile-list">
-											<li>fdibvhdf</li><hr>
-											<li>skdhvjsd</li>
+											<li class="dropdown-item"><a href="{{route('user.profile', ['user'=>Auth::user()->id])}}">Thông tin cá nhân</a></li><hr>
+											<li class="dropdown-item"><a href="#">DS Yêu thích</a></li><hr>
+											<li class="dropdown-item"><a href="#">Giỏ hàng</a></li><hr>
+											<li class="dropdown-item"><a href="#">Cài đặt</a></li>
 											<hr style="margin-bottom: 0%;">
 											<li>
 												<a class="dropdown-item" href="{{ route('logout') }}"
@@ -58,7 +60,7 @@
 						<div class="col-md-3">
 							<div class="header-logo">
 								<a href="{{route('home')}}" class="logo">
-									<img src="{{ asset('img/logo.png') }}" alt="Ảnh Bị Lỗi" style="width:100%">
+									<img src="{{ asset('img/logo.png')}}" alt="Logo" style="width:100%">
 								</a>
 							</div>
 						</div>
@@ -116,25 +118,3 @@
 			</div>
 			<!-- /MAIN HEADER -->
 
-			<!-- NAVIGATION -->
-			<nav id="navigation">
-			<!-- container -->
-			<div class="container">
-				<!-- responsive-nav -->
-				<div id="responsive-nav">
-					<!-- NAV -->
-					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="#">TRANG CHỦ</a></li>
-						<li><a href="#">KHUYẾN MÃI</a></li>
-						<li><a href="#">ỐP LƯNG</a></li>
-                        <li><a href="#">KÍNH CƯỜNG LỰC</a></li>
-						<li><a href="#">DÂY SẠC - CỦ SẠC</a></li>
-						<li><a href="#">SẠC DỰ PHÒNG</a></li>
-					</ul>
-					<!-- /NAV -->
-				</div>
-				<!-- /responsive-nav -->
-			</div>
-			<!-- /container -->
-		</nav>
-		<!-- /NAVIGATION -->

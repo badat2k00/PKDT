@@ -4,13 +4,15 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController ;
 use App\Http\Controllers\AjaxController ;
 use App\Http\Controllers\ProductCommentController;
 use App\Http\Controllers\CartController;
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
 Auth::routes();
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Router giỏ hàng
 Route::resource('carts', CartController::class);
 // Router sản phẩm
@@ -22,4 +24,8 @@ Route::post('products/{id}/comments', [ProductCommentController::class, 'store']
 // Route::get('productAjax', [AjaxController::class, 'getProducts']);
 Route::get('productAjax', [AjaxController::class, 'getProducts']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware('auth')->group(function () {
+    Route::resource('user',UserController::class);
+    Route::get('/profile/{user}', [UserController::class, 'profile'])->name('user.profile');
+    Route::put('/profile/{user}', [UserController::class, 'update'])->name('user.update-profile');
+});
