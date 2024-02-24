@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('phone',20);
+            $table->string('address');
             $table->string('avatar');
             $table->tinyInteger('level')->default(1);//mặc định không truyền gì vào thì là 1 là khách hàng còn truyền kèm 0 thì là admin
 
