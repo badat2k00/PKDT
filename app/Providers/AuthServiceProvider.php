@@ -4,6 +4,7 @@ namespace App\Providers;
 
 // use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Validator;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -21,6 +22,8 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Validator::replacer('custom_validator', function ($message, $attribute, $rule, $parameters) {
+            return str_replace(':attribute', $attribute, 'Không tìm thấy tài khoản');
+        });
     }
 }

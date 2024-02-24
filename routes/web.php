@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,9 +15,14 @@ use Illuminate\Support\Facades\Auth;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('/login', [App\Http\Controllers\ProductController::class, 'index'])->name('login');
-// Route::get('/register', [App\Http\Controllers\ProductController::class, 'create'])->name('register');
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+Route::middleware('auth')->group(function () {
+    Route::resource('user',UserController::class);
+    Route::get('/profile/{user}', [UserController::class, 'profile'])->name('user.profile');
+    Route::put('/profile/{user}', [UserController::class, 'update'])->name('user.update-profile');
+});
