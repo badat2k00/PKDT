@@ -134,7 +134,7 @@
                             <label for="email" class="form-label">Email hoặc SĐT</label>
                             <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                             @error('email')
-                                <span class="invalid-feedback" role="alert">
+                                <span class="invalid-feedback" role="alert" style="color: red">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
