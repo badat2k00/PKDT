@@ -47,7 +47,10 @@
 									@auth
 										<a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Trang chủ</a>
 									@else
-										<a href="{{route('login')}}"><i class="fa fa-user-o"></i> Đăng nhập</a>
+									<a href="{{ route('login', ['previous' => url()->current()]) }}">
+										<i class="fa fa-user-o"></i> Đăng nhập
+									</a>
+
 									@endauth
 								</div>
 							@endif
@@ -131,6 +134,7 @@
                         <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="text-left" style="margin: 2%; margin-left:25%; margin-right:25%;">
+							<input type="hidden" name="previous" value="{{ URL::previous() }}">
                             <label for="email" class="form-label">Email hoặc SĐT</label>
                             <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                             @error('email')

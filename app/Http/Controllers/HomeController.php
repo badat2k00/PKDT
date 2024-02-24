@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Product ;
 
 use Illuminate\Http\Request;
 
@@ -11,6 +12,7 @@ class HomeController extends Controller
      *
      * @return void
      */
+    // HAM DANG NHAP
     // public function __construct()
     // {
     //     $this->middleware('auth');
@@ -23,6 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $products = Product::all();
+
+        return view('home', compact('products'));
+    }
+    public function store()
+    {
+        //return view('auth.login');
+        return view('store');
     }
 }

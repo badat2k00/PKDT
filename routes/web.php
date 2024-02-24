@@ -1,20 +1,25 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('/login', [App\Http\Controllers\ProductController::class, 'index'])->name('login');
-// Route::get('/register', [App\Http\Controllers\ProductController::class, 'create'])->name('register');
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController ;
+use App\Http\Controllers\AjaxController ;
+use App\Http\Controllers\ProductCommentController;
+use App\Http\Controllers\CartController;
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Auth::routes();
+// Router giỏ hàng
+Route::resource('carts', CartController::class);
+// Router sản phẩm
+Route::resource('products',ProductController::class);
+// routes/web.php
+
+Route::post('products/{id}/comments', [ProductCommentController::class, 'store'])->name('product.comments.store');
+
+// Route::get('productAjax', [AjaxController::class, 'getProducts']);
+Route::get('productAjax', [AjaxController::class, 'getProducts']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
