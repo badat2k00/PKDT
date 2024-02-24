@@ -4,19 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
+use Illuminate\Http\Request;
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
+
 
     use AuthenticatesUsers;
 
@@ -36,4 +27,19 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    protected function authenticated(Request $request, $user)
+    {
+        $previousUrl = $request->input('previous');
+    
+        // Nếu tồn tại URL của trang trước đó, chuyển hướng đến đó
+        if ($previousUrl) {
+            return redirect()->intended($previousUrl);
+        }
+    
+        // Mặc định, chuyển hướng đến trang home
+        return redirect()->intended($this->redirectPath());
+    }
+    
+
 }

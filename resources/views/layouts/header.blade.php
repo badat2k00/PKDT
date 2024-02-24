@@ -4,7 +4,7 @@
 					<ul class="header-links pull-left">
 						<li><a href="#"><i class="fa fa-phone"></i> 0987654321</a></li>
 						<li><a href="#"><i class="fa fa-envelope-o"></i> nhom3@email.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i> 175 Tây Sơn, Đống Đa, Hà Nội</a></li>
+						<li><a href="https://www.google.com/maps/place/175+P.+T%C3%A2y+S%C6%A1n,+Trung+Li%E1%BB%87t,+%C4%90%E1%BB%91ng+%C4%90a,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/@21.0068481,105.8229214,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ad744eb9a567:0x86ebcd89ee0bda7b!8m2!3d21.0068431!4d105.8255017!16s%2Fg%2F11thfr5wxv?hl=vi-VN&entry=ttu"><i class="fa fa-map-marker"></i> 175 Tây Sơn, Đống Đa, Hà Nội</a></li>
 					</ul>
 					<ul class="header-links pull-right">
 						@guest
